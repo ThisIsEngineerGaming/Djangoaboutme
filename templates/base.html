@@ -1,0 +1,26 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}About Me{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'about/style.css' %}">
+</head>
+<body>
+<nav>
+    <a href="{% url 'about:home' %}"><b>Home</b></a>
+    <span class="sep">|</span>
+    <span class="label">About me:</span>
+    <a href="{% url 'about:me:biography' %}">Biography</a>
+    <a href="{% url 'about:me:facts' %}">Interesting facts</a>
+    <span class="sep">|</span>
+    <span class="label">My city:</span>
+    <a href="{% url 'about:city:info' %}">Basic data</a>
+    <a href="{% url 'about:city:places' %}">Interesting places</a>
+</nav>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+</body>
+</html>

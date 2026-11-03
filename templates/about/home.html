@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome!</h1>
+<p>To whatever this is about myself i am not sure</p>
+
+<h2>About me</h2>
+<ul>
+    <li><a href="{% url 'about:me:biography' %}">Biography</a></li>
+    <li><a href="{% url 'about:me:facts' %}">Interesting facts</a></li>
+</ul>
+
+<h2>My city</h2>
+<ul>
+    <li><a href="{% url 'about:city:info' %}">Basic data</a></li>
+    <li><a href="{% url 'about:city:places' %}">Interesting places</a></li>
+</ul>
+{% endblock %}
